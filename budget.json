@@ -1,0 +1,21 @@
+[
+    {
+        "Month": "feb",
+        "Rent": "221",
+        "Food": "",
+        "Utilities": "32",
+        "Shopping": "3",
+        "Entertainment": "23",
+        "Savings": "23"
+    },
+    {
+        "Month": "dhs",
+        "Rent": "2323",
+        "Food": "22",
+        "Utilities": "12",
+        "Shopping": "12",
+        "Entertainment": "1",
+        "Savings": "22"
+    }
+]
+

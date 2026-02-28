@@ -1,34 +1,10 @@
 # #def budget():
 #     #categories: food, rent, utilities, transportation, shopping, entertainment, savings
-# import json
-
-# # New data to add
-# new_data = {"name": "khebde", "age": 21}
-
-
-# # Step 1: Read existing data
-# with open("data.json", "r") as file:
-#     data = json.load(file)
-
-# # Step 2: Add new data
-# data.append(new_data)
-
-# # Step 3: Write back to file
-# with open("data.json", "w") as file:
-#     json.dump(data, file,indent=4)
 
 # print("data append success")
-
+import json
 def budget():
-    Categories= {
-        "Month" : "January",
-        "Rent" : 250,
-        "Food" : 100,
-        "Utilities" : 40,
-        "Entertainment" : 10,
-        "Shopping" : 5,
-        "Savings" : 0,
-    }
+    Categories= {}
     Categories["Month"]=input("Month :")
     Categories["Rent"]=input("Rent :")
     Categories["Food"]=input("Food :")
@@ -37,14 +13,46 @@ def budget():
     Categories["Entertainment"]=input("Entertainment: ")
     Categories["Savings"]=input("Savings: ")
 
-    print("\nBudget for the month of", Categories["Month"])
-    print("Rent:", Categories["Rent"])
-    print("Food:", Categories["Food"])  
-    print("Utilities:", Categories["Utilities"])
-    print("Entertainment:", Categories["Entertainment"])
-    print("Shopping:", Categories["Shopping"])
-    print("Savings:", Categories["Savings"])
+    with open("budget.json", "r") as file:
+        data = json.load(file)
 
-    print(Categories)
+    # Step 2: Add new data
+    data.append(Categories)
+
+    # Step 3: Write back to file
+    with open("budget.json", "w") as file:
+        json.dump(data, file,indent=4)
+
+def Expenses():    
+    expenses={}
+    Categories = input("Enter which expenses is it: ")
+    valid=["food","rent","savings","utilities","entertainment"]
+    if Categories not in valid:
+        print("invalid category")
+        return 
+    name=input("Enter name: ")
+    price=input("Enter price: ")
+    date=input("Enter date: ")
+    expenses = {"name": name , "price" : price ,"date": date}
+
+    with open("expenses.json", "r") as file:
+        data = json.load(file)
+
+    # print(data[0]["utilities"][0]["price"])
+    # print(data[0]["entertainment"][1]["date"])
+    # print(type(1\dat)a[0])
+   
+    if Categories=="food" : 
+        data[0]["food"].append(expenses)
+    elif Categories=="rent" : 
+        data[0]["rent"].append(expenses)
+    elif Categories=="savings" : 
+        data[0]["savings"].append(expenses)
+    elif Categories=="entertainment": 
+        data[0]["entertainment"].append(expenses)
+    elif Categories=="utilities" : 
+        data[0]["utilities"].append(expenses)
     
-budget()
+    with open("expenses.json", "w") as file:
+        json.dump(data, file,indent=4)
+Expenses()

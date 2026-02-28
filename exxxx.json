@@ -1,0 +1,41 @@
+[
+    {
+        "food":[{
+         "category":"",
+         "name": "",
+         "price":"",
+         "date":""   
+        }],
+        "rent":[{
+         "category":"",
+         "name": "",
+         "price":"",
+         "date":""   
+        }],
+        "savings":[{
+         "category":"",
+         "name": "",
+         "price":"",
+         "date":""   
+        }],
+        "entertainment" :[{
+         "category":"",
+         "name": "",
+         "price":"",
+         "date":""   
+        },
+        {
+         "category":"",
+         "name": "",
+         "price":"",
+         "date":""   
+    
+        }],
+        "utilities": [{
+         "category":"",
+         "name": "",
+         "price":"",
+         "date":""   
+        }]
+    }
+]
