@@ -30,15 +30,21 @@ def budget():
         "Savings" : 0,
     }
     Categories["Month"]=input("Month :")
-    rent=input("Rent :")
-    Food=input("Food :")
-    utilities=input("Utilities :")
-    Shopping=input("Shopping :")
+    Categories["Rent"]=input("Rent :")
+    Categories["Food"]=input("Food :")
+    Categories["Utilities"]=input("Utilities :")
+    Categories["Shopping"]=input("Shopping :")
+    Categories["Entertainment"]=input("Entertainment: ")
+    Categories["Savings"]=input("Savings: ")
 
+    print("\nBudget for the month of", Categories["Month"])
+    print("Rent:", Categories["Rent"])
+    print("Food:", Categories["Food"])  
+    print("Utilities:", Categories["Utilities"])
+    print("Entertainment:", Categories["Entertainment"])
+    print("Shopping:", Categories["Shopping"])
+    print("Savings:", Categories["Savings"])
 
-    print(Categories["Month"])
     print(Categories)
-    print("done!")
-  
-
+    
 budget()
