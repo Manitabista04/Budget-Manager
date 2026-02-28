@@ -38,7 +38,7 @@ def budget():
 
     print(Categories["Month"])
     print(Categories)
-
+    print("done!")
   
 
 budget()
