@@ -56,9 +56,8 @@ def addExpenses():
     print("do you want to add more expenses? (y/n)")
     answer=input()
     if answer=="y":
-        Expenses()
+        addExpenses()
       
-Expenses()
 def getExpenses():
     pass
 def getBudget():
