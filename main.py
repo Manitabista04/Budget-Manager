@@ -55,4 +55,10 @@ def Expenses():
     
     with open("expenses.json", "w") as file:
         json.dump(data, file,indent=4)
+
+    print("do you want to add more expenses? (y/n)")
+    answer=input()
+    if answer=="y":
+        Expenses()
+      
 Expenses()
