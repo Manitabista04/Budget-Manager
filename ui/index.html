@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blush Budget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <h1>Blush Budget</h1>
+        <p>Track your money beautifully my beautiful Moon ✨</p>
+    </header>
+
+    <!-- Month Selector -->
+    <div class="card soft-card">
+        <h2>Select Month</h2>
+        <input type="month">
+    </div>
+
+    <!-- Category Budget Section -->
+    <div class="card soft-card">
+        <h2>Set Your Monthly Budgets</h2>
+
+        <div class="category-grid">
+            <div>
+                <label>Food</label>
+                <input type="number" placeholder="$">
+            </div>
+
+            <div>
+                <label>Rent</label>
+                <input type="number" placeholder="$">
+            </div>
+
+            <div>
+                <label>Utilities</label>
+                <input type="number" placeholder="$">
+            </div>
+
+            <div>
+                <label>Shopping</label>
+                <input type="number" placeholder="$">
+            </div>
+
+            <div>
+                <label>Savings</label>
+                <input type="number" placeholder="$">
+            </div>
+
+            <div>
+                <label>Entertainment</label>
+                <input type="number" placeholder="$">
+            </div>
+        </div>
+
+        <button class="pink-btn">Save Budgets</button>
+    </div>
+
+    <!-- Add Expense -->
+    <div class="card soft-card">
+        <h2>Add Expense</h2>
+
+        <input type="number" placeholder="Amount">
+
+        <select>
+            <option>Select Category</option>
+            <option>Food</option>
+            <option>Rent</option>
+            <option>Utilities</option>
+            <option>Shopping</option>
+            <option>Savings</option>
+            <option>Entertainment</option>
+        </select>
+
+        <input type="date">
+
+        <button class="pink-btn">Add Expense</button>
+    </div>
+
+</div>
+
+</body>
+</html>
