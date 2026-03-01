@@ -59,6 +59,10 @@ def addExpenses():
         addExpenses()
       
 def getExpenses():
-    pass
+    with open("expenses.json","r") as file :
+        data=json.load(file)
+        return data
 def getBudget():
-    pass
+    with open("budget.json","r") as file:
+        data =json.load(file)
+        return data
