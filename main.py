@@ -3,7 +3,7 @@
 
 # print("data append success")
 import json
-def budget():
+def addBudget():
     Categories= {}
     Categories["Month"]=input("Month :")
     Categories["Rent"]=input("Rent :")
@@ -23,7 +23,7 @@ def budget():
     with open("budget.json", "w") as file:
         json.dump(data, file,indent=4)
 
-def Expenses():    
+def addExpenses():    
     expenses={}
     Categories = input("Enter which expenses is it: ")
     valid=["food","rent","savings","utilities","entertainment"]
@@ -38,10 +38,7 @@ def Expenses():
     with open("expenses.json", "r") as file:
         data = json.load(file)
 
-    # print(data[0]["utilities"][0]["price"])
-    # print(data[0]["entertainment"][1]["date"])
-    # print(type(1\dat)a[0])
-   
+
     if Categories=="food" : 
         data[0]["food"].append(expenses)
     elif Categories=="rent" : 
@@ -62,3 +59,7 @@ def Expenses():
         Expenses()
       
 Expenses()
+def getExpenses():
+    pass
+def getBudget():
+    pass
