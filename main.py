@@ -16,7 +16,7 @@ def addBudget():
     with open("budget.json", "r") as file:
         data = json.load(file)
 
-    # Step 2: Add new data
+    # Step 2: Add new datadd
     data.append(Categories)
 
     # Step 3: Write baaack to fileeeeeee
