@@ -19,7 +19,7 @@ def addBudget():
     # Step 2: Add new data
     data.append(Categories)
 
-    # Step 3: Write back to file
+    # Step 3: Write back to fileeeeeeeeeeee
     with open("budget.json", "w") as file:
         json.dump(data, file,indent=4)
 
