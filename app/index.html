@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Tracker</title>
+</head>
+<body>
+    <h1>My Budget Tracker</h1>
+
+    <!-- Add Budget Form -->
+    <h2>Add Budget</h2>
+    <input type="text" id="month" placeholder="Month" />
+    <input type="text" id="food" placeholder="Food budget" />
+    <button onclick="addBudget()">Save Budget</button>
+
+    <!-- Add Expense Form -->
+    <h2>Add Expense</h2>
+    <input type="text" id="category" placeholder="Category (food, rent...)" />
+    <input type="text" id="name" placeholder="Expense name" />
+    <input type="text" id="price" placeholder="Price" />
+    <input type="text" id="date" placeholder="Date" />
+    <button onclick="addExpense()">Add Expense</button>
+
+    <script>
+        // This sends data to your Flask API
+        async function addBudget() {
+            const response = await fetch("/budget", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    Month: document.getElementById("month").value,
+                    Food: document.getElementById("food").value,
+                })
+            });
+            const data = await response.json();
+            alert(data.message);  // shows "Budget added!"
+        }
+
+        async function addExpense() {
+            const response = await fetch("/expense", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    category: document.getElementById("category").value,
+                    name: document.getElementById("name").value,
+                    price: document.getElementById("price").value,
+                    date: document.getElementById("date").value,
+                })
+            });
+            const data = await response.json();
+            alert(data.message);
+        }
+    </script>
+</body>
+</html>
+```
+
