@@ -66,5 +66,5 @@ def getBudget():
     with open("budget.json","r") as file:
         data =json.load(file)
         return data
-#delete fucntionn
-#function
+#delete fucntion
+#new function added
